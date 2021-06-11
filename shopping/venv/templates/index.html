@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    {% for name in user_image %}
+    <h1 style="color:blue;"style="font-family:verdana;">{{ name }} <img src="{{ url_for('static', filename=name) }}"  style="width:480px;height:240px;"> </h1>
+    {% endfor %}
+</body>
+</html>

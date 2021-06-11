@@ -1,0 +1,17 @@
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        {% for name in user_image %}
+            <div class="carousel-item {% if loop.index == 1 %} active {% endif %}" id="slide{{ loop.index }}">
+                <img src="{{ url_for('static', filename=name) }}" class="d-block w-100" alt="...">
+            </div>
+        {% endfor %}
+   </div>
+    <a class="carousel-control-prev" href="#pageCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon bg-primary" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#pageCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon bg-primary" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
